@@ -12,6 +12,14 @@ GIT
       spree_core (~> 3.0.0)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_multi_currency.git
+  revision: 0b9389a7795b8a799373175c6d3bc0ab4cdf6bdb
+  branch: 3-0-stable
+  specs:
+    spree_multi_currency (3.0.0.beta)
+      spree_core (~> 3.0.0.rc4)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: b554f307e5aa887110a70d54f8967c284f881375
   branch: 3-0-stable
@@ -30,12 +38,6 @@ GIT
   specs:
     spree_gateway (3.0.0.beta)
       spree_core (~> 3.0.0)
-
-PATH
-  remote: ../spree_multi_currency
-  specs:
-    spree_multi_currency (3.0.0.beta)
-      spree_core (~> 3.0.0.rc4)
 
 GEM
   remote: https://rubygems.org/

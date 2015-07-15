@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: zxstore_development
+
+test:
+  <<: *default
+  database: zxstore_test
+
+production:
+  <<: *default
+  database: zxstore

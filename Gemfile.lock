@@ -195,6 +195,7 @@ GEM
       i18n (>= 0.6.4, <= 0.7.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
+    mysql2 (0.3.18)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     open4 (1.3.4)
@@ -206,7 +207,6 @@ GEM
       mime-types
     paranoia (2.1.3)
       activerecord (~> 4.0)
-    pg (0.18.2)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -388,7 +388,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mina
-  pg
+  mysql2
   powder
   puma
   rails (= 4.2.1)
@@ -402,3 +402,6 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
+
+BUNDLED WITH
+   1.10.5

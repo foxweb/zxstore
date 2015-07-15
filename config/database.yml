@@ -9,10 +9,3 @@ development:
 test:
   <<: *default
   database: zxstore_test
-
-production:
-  <<: *default
-  database: zxstore
-  username: zxevo
-  password:
-  host: localhost

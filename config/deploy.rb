@@ -51,7 +51,7 @@ task :deploy => :environment do
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
-
+    
     to :launch do
       invoke :'puma:restart'
     end
@@ -78,9 +78,9 @@ namespace :puma do
   task :restart => :environment do
     queue %{
       #{bp_config}
-      #{bp} dev stop
+      #{bp} zxstore stop
       #{bp_config}
-      #{bp} dev start
+      #{bp} zxstore start
     }
   end
 
@@ -88,7 +88,7 @@ namespace :puma do
   task :stop => :environment do
     queue %{
       #{bp_config}
-      #{bp} dev stop
+      #{bp} zxstore stop
     }
   end
 
@@ -96,7 +96,7 @@ namespace :puma do
   task :start => :environment do
     queue %{
       #{bp_config}
-      #{bp} dev start
+      #{bp} zxstore start
     }
   end
 end

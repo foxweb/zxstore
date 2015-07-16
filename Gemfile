@@ -6,7 +6,6 @@ gem 'slim'
 
 gem 'puma'
 gem 'mina'
-gem 'bluepill'
 
 # debug
 gem 'awesome_pry'

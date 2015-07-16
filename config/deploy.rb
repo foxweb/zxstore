@@ -9,7 +9,7 @@ set :deploy_to, '/home/foxweb/www/zxstore'
 set :app_path, "#{deploy_to}/#{current_path}"
 set :repository, 'git@github.com:foxweb/zxstore.git'
 set :branch, `git rev-parse --abbrev-ref HEAD`.rstrip
-set :shared_paths, %W(config/database.yml public/uploads public/assets log tmp)
+set :shared_paths, %W(config/database.yml config/secrets.yml public/uploads public/assets public/spree log tmp)
 set :keep_releases, 5
 
 task :environment do
@@ -34,6 +34,9 @@ task :setup => :environment do
 
   queue! %[mkdir -p "#{deploy_to}/shared/public/uploads"]
   queue! %[chmod g+rwx,u+rwx "#{deploy_to}/shared/public/uploads"]
+
+  queue! %[mkdir -p "#{deploy_to}/shared/public/spree"]
+  queue! %[chmod g+rwx,u+rwx "#{deploy_to}/shared/public/spree"]
 
   queue! %[mkdir -p "#{deploy_to}/shared/log"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]

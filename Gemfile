@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.2'
 gem 'mysql2'
 gem 'slim'
 
@@ -28,7 +28,7 @@ group :development, :test do
   gem 'better_errors'
 end
 
-gem 'spree', '~>3.0.1'
+gem 'spree', '~>3.0.3'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-0-stable'
